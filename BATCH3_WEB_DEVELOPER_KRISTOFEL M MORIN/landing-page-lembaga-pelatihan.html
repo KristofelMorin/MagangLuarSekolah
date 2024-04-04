@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembaga Pelatihan PintarKomputer</title>
+    <link rel="icon" href="image/pintarkomputer-icon.png" type="image/png">
+    <!-- <link rel="icon" type="images/x-icon" href="https://www.w3docs.com/favicon.ico" /> -->
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="search-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar-container">
+            <ul>
+                    <li><a class="navbar-brand" href="#">Pintar<span>Komputer</span></a></li>
+                    <!-- <li id="search" onclick="searchBar()"><a href="#"><i class="bi bi-search"></i>&nbsp;Search</a></li> -->
+                    <!-- <li> -->
+                        <div class="search-box">
+                            
+                            <input type="text" placeholder="Search...">
+                            <div class="search-icon">
+                              <i class="fas fa-search"><span>&nbsp;&nbsp;Search</span></i>
+                            </div>
+                      <div class="cancel-icon">
+                              <i class="fas fa-times"></i>
+                            </div>
+                      <div class="search-data">
+                      </div>
+                      </div>
+                      <script>
+                            const searchBox = document.querySelector(".search-box");
+                            const searchBtn = document.querySelector(".search-icon");
+                            const cancelBtn = document.querySelector(".cancel-icon");
+                            const searchInput = document.querySelector("input");
+                            const searchData = document.querySelector(".search-data");
+                            searchBtn.onclick =()=>{
+                              searchBox.classList.add("active");
+                              searchBtn.classList.add("active");
+                              searchInput.classList.add("active");
+                              cancelBtn.classList.add("active");
+                              searchInput.focus();
+                              if(searchInput.value != ""){
+                                var values = searchInput.value;
+                                searchData.classList.remove("active");
+                                searchData.innerHTML = "You just typed " + "<span style='font-weight: 500;'>" + values + "</span>";
+                              }else{
+                                searchData.textContent = "";
+                              }
+                            }
+                            cancelBtn.onclick =()=>{
+                              searchBox.classList.remove("active");
+                              searchBtn.classList.remove("active");
+                              searchInput.classList.remove("active");
+                              cancelBtn.classList.remove("active");
+                              searchData.classList.toggle("active");
+                              searchInput.value = "";
+                            }
+                          </script>
+                    <!-- </li> -->
+                    <li><a href="#"><i class="bi bi-house"></i>&nbsp;Home</a></li>
+                    <li><a href="authors.html" target="_blank"><i class="bi bi-person"></i>&nbsp;About</a></li>
+                    <li><a href="#"><i class="bi bi-telephone"></i>&nbsp;Contact</a></li>
+                    <li><a href="login.html"><i class="bi bi-box-arrow-in-right"></i>&nbsp;Login</a></li>
+                </ul>
+            </nav>
+            <script>
+                function searchBar(){
+                    var search = document.getElementById('#search');
+                    document.write('<input class="search" type="search" placeholder="Search...">')
+                }
+            </script>
+        </header>
+    <h1 style="text-align: center;">Selamat Datang di <u>PintarKomputer</u></h1>
+    <div class="img-container">
+        <figure>
+            <img src="image/profile.jpeg" alt="profile.jpeg" id="profile">
+            <figcaption>Profile PintarKomputer</figcaption>
+        </figure>
+    </div>
+
+    <main>
+        <div class="content">
+            <article id="sejarah">
+                <h1>Sejarah PT.PintarKomputer</h1>
+                <p>Kami berkomitmen untuk memberikan pendidikan berkualitas kepada para calon profesional IT.
+                    Berdiri sejak  4 Maret 2024 dan telah menyediakan berbagai macam program pelatihan yang dapat  diakses oleh masyarakat.
+                    Kami memiliki program belajar  yang terstruktur dan berbasis teknologi informasi yang sangat muda dan inovatif.
+                </p>
+                <h2>Profile PT.PintarKomputer</h2>
+            </article>
+
+            <article id="visi_misi">
+                <p>PintarKomputer Academy adalah lembaga pelatihan komputer yang berdedikasi untuk memberikan pelatihan berkualitas tinggi dalam berbagai bidang teknologi informasi dan komputer. 
+                    Kami bertujuan untuk mempersiapkan peserta pelatihan dengan keterampilan dan pengetahuan yang diperlukan untuk berhasil dalam industri teknologi yang cepat berkembang.</p>
+                <h2>VISI:</h2>
+                <p>Menjadi pusat pelatihan terkemuka yang diakui secara global dalam pengembangan keterampilan teknologi informasi dan komputer.</p>
+                <h2>MISI:</h2>
+                <ul>
+                    <li>Memberikan pelatihan berkualitas tinggi yang berfokus pada keterampilan praktis dan aplikasi industri.</li>
+                    <li>Mendorong inovasi dalam pendekatan pembelajaran dan pengajaran untuk memastikan keefektifan dan relevansi pelatihan.</li>
+                    <li>Menyediakan lingkungan belajar yang inklusif dan mendukung bagi semua peserta pelatihan.</li>
+                    <li>Berkolaborasi dengan industri dan mitra akademis untuk memastikan bahwa kurikulum kami selalu terkini dan sesuai dengan kebutuhan pasar.</li>
+                    <li>Membantu peserta pelatihan dalam mempersiapkan diri untuk menghadapi tantangan dan kesempatan dalam karir mereka di bidang teknologi informasi.</li>
+                </ul>
+            </article>
+
+            <article id="pelatihan">
+                <h2>Program Pelatihan  Kami : </h2>
+                <ul>
+                    <li>Pengembangan Web:
+                        <ul>
+                            <li>Pelajari dasar-dasar HTML, CSS, dan JavaScript.</li>
+                            <li>Buat situs web interaktif dan responsif.</li>
+                            <li>Pelatihan lanjutan tentang kerangka kerja seperti React atau Angular.</li>
+                        </ul>
+                    </li>
+                    <li>Analisis Data:
+                        <ul>
+                            <li>Pelajari pengolahan data menggunakan Python.</li>
+                            <li>Analisis statistik dan visualisasi data.</li>
+                            <li>Implementasi machine learning untuk prediksi dan pengambilan keputusan.</li>
+                        </ul>
+                    </li>
+                    <li>Keamanan Informasi:
+                        <ul>
+                            <li>Pelajari praktik terbaik dalam mengamankan sistem dan jaringan.</li>
+                            <li>Penetration testing dan manajemen risiko keamanan.</li>
+                            <li>Sertifikasi keamanan seperti CEH atau CISSP.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <article id="informasi">
+                <h2>Informasi Pelatihan</h2>
+                <p>Jadwal, durasi, dan biaya pelatihan dapat disesuaikan dengan kebutuhan Anda.</p>
+                <!--Membuat tabel jadwal dan biaya pelatihan -->
+                <table border="1px" cellspacing="0" cellpadding="8">
+                    <tr>
+                        <th>Jadwal</th>
+                        <th>Durasi</th>
+                        <th>Biaya</th>
+                    </tr>
+                    <tr>
+                        <td>Perbulan</td>
+                        <td>1 Bulan</td>
+                        <td>Rp.1 Juta</td>
+                    </tr>
+                    <tr>
+                        <td>Pertahun</td>
+                        <td>12 Bulan</td>
+                        <td>Rp.5 Juta</td>
+                    </tr>
+                    <tr>
+                        <td>Selamanya</td>
+                        <td>Unlimited</td>
+                        <td>Rp.12 Juta</td>
+                    </tr>
+                </table>
+            </article>
+            <article id="berita">
+                <h2>Baca Berita dan Artikel</h2>
+                <div id="filters">
+                    <button onclick="filterSelection('all')">Semua</button>
+                    <button onclick="filterSelection('berita')">Berita</button>
+                    <button onclick="filterSelection('artikel')">Artikel</button>
+                </div>
+                <div class="media">
+                    <div class="item berita"><a href="berita/sma-1-yogya.html"><img src="image/sma1.jpeg" alt=""><br/>Kunjungan Industri SMA 1 Yogyakarta</a></div>
+                    <div class="item artikel"><a href="berita/webinar-ml.html"><img src="image/ml.jpg" alt="">Webinar tentang Pengenalan Machine Learning</a></div>
+                    <div class="item berita"><a href="berita/pelatihan-gratis.html"><img src="image/pelatihan-gratis.jpeg" alt="">Pelatihan Gratis di Desa Sahabat</a></div>
+                </div>
+                <p>Kunjungi blog kami untuk berita terkini seputar teknologi informasi dan artikel inspiratif dari para ahli industri.</p>
+            </article>
+
+            <h2>Galeri Foto dan Video</h2>
+            <p>Lihat momen-momen berharga dari pelatihan sebelumnya melalui galeri foto dan video kami.</p>
+            <!-- <div class="img-container"> -->
+                <!-- <figure> -->
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="image/peserta.jpeg" alt="dok2.jpeg" style="width: 100%;">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="image/peserta2.jpeg" alt="dok3.jpeg" style="width: 100%;">
+                        </div>
+                        <div class="mySlides fade">
+                            <video controls>
+                                <source src="video/VidioPelatihan.mp4" type="video/mp4" style="width: 100%;">
+                                Maaf, browser Anda tidak mendukung pemutaran video.
+                            </video>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                <!-- </figure> -->
+            <!-- </div> -->
+            <script>
+                //Ini untuk animasi  gambar dan video
+                let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  const slides = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  slides[slideIndex-1].style.display = "block";  
+                  setTimeout(showSlides, 5000); // ganti gambar setiap 5 detik
+                }
+                
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                // Filter berita dan artikel
+                function filterSelection(category) {
+                    const items = document.querySelectorAll('.item');
+                    if (category === 'all') {
+                      items.forEach(item => {
+                        item.style.display = 'block';
+                      });
+                    } else {
+                      items.forEach(item => {
+                        if (item.classList.contains(category)) {
+                          item.style.display = 'block';
+                        } else {
+                          item.style.display = 'none';
+                        }
+                      });
+                    }
+                  }
+                </script>
+        </div>
+    </main>
+    <footer>
+        <div id="kontak">
+            <div class="container">
+                <div class="row justify-content-around">
+                    <div class="col-md-3 text-center mb-5">
+                        <img src="image/pintarkomputer-logo.png" alt="PintarKomputer" class="img-fluid w-75">
+        
+                        <hr>
+        
+                        <div class="text-light">
+                            <p>
+                                PT. Pintar Komputer Indonesia Yogyakarta 55198, Indonesia
+                            </p>
+                            Jl. Biak Timur No. 201 <br>Yogyakarta 55198, Indonesia
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h3 class="mb-3 text-utdi-orange">Informasi</h3>
+        
+                        <ul class="list-unstyled text-light">
+                            <li class="mb-1">
+                                <i class="bi bi-telephone me-3"></i>
+                                +62 22 122001                   </li>
+                            <li class="mb-1">
+                                <i class="bi bi-envelope me-3"></i>
+                                pintarkomputer@email.com                    </li>
+                        </ul>
+        
+                        <h3 class="mb-3 text-utdi-orange">Ikuti Kami</h3>
+                        <ul class="list-inline">
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="https://www.facebook.com/Melkisedek.Morin/" target="_blank">
+                                        <img src="https://utdi.ac.id/___files/25360_1517158800_link_33.png" title="Facebook" alt="Facebook" width="25">
+                                    </a>
+                                </li>
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="#" target="_blank">
+                                        <img src="https://www.utdi.ac.id/___files/48026_1638896400_link_86.png" title="TikTok" alt="TikTok" width="25">
+                                    </a>
+                                </li>
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="#" target="_blank">
+                                        <img src="https://utdi.ac.id/___files/36721_1517158800_link_39.png" title="YouTube" alt="YouTube" width="25">
+                                    </a>
+                                </li>
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="https://www.instagram.com/kristovelmorin/" target="_blank">
+                                        <img src="https://www.utdi.ac.id/___files/36510_1638896400_link_36.png" title="Instagram" alt="Instagram" width="25">
+                                    </a>
+                                </li>
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="#" target="_blank">
+                                        <img src="https://www.utdi.ac.id/___files/76637_1638896400_link_35.png" title="Twitter" alt="Twitter" width="25">
+                                    </a>
+                                </li>
+                                                    <li class="list-inline-item mb-2 me-3">
+                                    <a href="https://www.linkedin.com/in/kristofel-morin/" target="_blank">
+                                        <img src="https://www.utdi.ac.id/___files/15241_1638896400_link_54.png" title="LinkedIn" alt="LinkedIn" width="25">
+                                    </a>
+                                </li>
+                                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
+    </body>
+</html>

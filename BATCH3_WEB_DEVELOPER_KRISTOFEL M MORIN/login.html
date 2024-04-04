@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    /*background-color: black;*/
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+      max-width: 800px;
+      margin-top: 100px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+
+  /* Set a style for the submit button */
+  .loginbtn {
+    background-color: #052c51;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+
+  .loginbtn:hover {
+    opacity: 1;
+  }
+
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+
+  /* Set a grey background color and center the text of the "sign in" section */
+  .login {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  </style>
+  <script>
+    function validasiLogin() {
+      let x = document.forms["login"]["email"].value;
+      let y = document.forms["login"]["psw"].value;
+      if (x == "" || y == "") {
+        alert("Mohon isi email dan  password !");
+        return false;
+      }
+      else {
+        document.write("<h1 style='color: blue; border: 1px solid; text-align: center; margin-top: 10%;'>Selamat anda telah Login...</h1>")
+      }
+
+    }
+  </script>
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<form action="./action_page.php" name="login" onsubmit="return validasiLogin()" method="post">
+  <div class="container">
+    <div class="navbar-container">
+        <a class="navbar-brand" href="landing-page-lembaga-pelatihan.html">Pintar<span>Komputer</span></a>
+    </div>
+    <h1 style="text-align: center;">Login</h1>
+    <p>Silakan masukkan email dan password Anda.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw">
+
+    <button type="submit" class="loginbtn"><strong>Login</strong></button>
+    
+  </div>
+
+  <div class="container login">
+    <p>Belum punya akun? <a href="register.html">Daftar sekarang</a>.</p>
+  </div>
+</form>
+</body>
+</html>
